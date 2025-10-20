@@ -1,0 +1,98 @@
+/* src/components/About.module.css */
+
+.aboutSection {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  position: relative;
+  z-index: 1;
+  background-color: rgba(26, 26, 46, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra sutil para profundidade */
+}
+
+.introText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #90CAF9; /* Um azul mais claro para destaque */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sectionTitle {
+  font-size: 3.5rem; /* Um pouco maior para mais impacto */
+  margin-bottom: 3rem;
+  text-align: left;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.aboutContentContainer {
+  display: flex;
+  gap: 4rem; /* Espaço entre as duas colunas */
+  width: 100%;
+  align-items: flex-start;
+}
+
+.textColumn {
+  flex: 1.5; /* Coluna de texto um pouco maior */
+  max-width: 600px;
+}
+
+.textColumn p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.skillsGrid {
+  flex: 1; /* Coluna dos cards */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de cards */
+  gap: 1.5rem; /* Espaço entre os cards */
+}
+
+.skillCard {
+  background-color: rgba(26, 26, 46, 0.5); /* Fundo um pouco mais opaco para o card */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  text-align: center;
+  min-height: 180px; /* Altura mínima para os cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.skillCard:hover {
+  transform: translateY(-5px); /* Efeito de flutuar ao passar o mouse */
+  border-color: #30CFD0; /* Borda fica azul ao passar o mouse */
+  box-shadow: 0 4px 20px rgba(48, 207, 208, 0.2);
+}
+
+.skillIcon {
+  font-size: 4rem; /* Tamanho grande para o ícone */
+  color: #90CAF9; /* Mesmo azul claro do texto "INTRODUÇÃO" */
+  margin-bottom: 1rem; /* Espaço entre o ícone e o nome */
+}
+
+.skillName {
+  margin: 0; /* Remove qualquer margem padrão do parágrafo */
+  font-weight: 500;
+  font-size: 1rem;
+}

@@ -1,0 +1,31 @@
+/* src/components/Header.module.css */
+
+.headerContainer {
+  position: fixed; /* Fica fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem; /* Espaçamento interno */
+  z-index: 10; /* Garante que fique acima de tudo */
+  display: flex;
+  justify-content: flex-end; /* Alinha os ícones à direita */
+  align-items: center;
+
+  /* EFEITO DE VIDRO FOSCO - SUBSTITUA A LINHA 'background-color' POR ESTAS DUAS */
+  background-color: rgba(10, 10, 26, 0.5); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.socialIcons a {
+  color: #ffffff; /* Cor branca */
+  font-size: 1.8rem; /* Tamanho do ícone */
+  margin-left: 1.5rem; /* Espaço entre os ícones */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para a animação */
+}
+
+.socialIcons a:hover {
+  color: #30CFD0; /* Muda para o azul do seu degradê ao passar o mouse */
+  transform: translateY(-5px); /* Move o ícone 5px para cima */
+}
