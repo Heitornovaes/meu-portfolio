@@ -14,7 +14,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Sombra sutil para profundidade */
+  
 }
 
 .introText {
@@ -30,7 +30,11 @@
   font-size: 3.5rem; /* Um pouco maior para mais impacto */
   margin-bottom: 3rem;
   text-align: left;
-  color: #ffffff;
+  background: linear-gradient(to right, #0026ff, #91a5ff, #0026ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 9s linear infinite;
   line-height: 1.2;
 }
 

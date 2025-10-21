@@ -9,7 +9,7 @@ import { SiAdobecreativecloud } from 'react-icons/si';
 
 const About = () => {
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="about" >
       <h2 className={styles.sectionTitle}>Sobre mim</h2>
 
       <div className={styles.aboutContentContainer}>
@@ -20,10 +20,9 @@ const About = () => {
 
 
         <div className={styles.skillsGrid}>
-          {/* 2. Substitua os divs vazios por estes cards preenchidos */}
           <div className={styles.skillCard}>
-            <SiAdobecreativecloud className={styles.skillIcon} /> {/* <-- ÍCONE TROCADO */}
-            <p className={styles.skillName}>Adobe CC</p>           {/* <-- TEXTO TROCADO */}
+            <SiAdobecreativecloud className={styles.skillIcon} /> 
+            <p className={styles.skillName}>Adobe CC</p>           
           </div>
           <div className={styles.skillCard}>
             <FaHtml5 className={styles.skillIcon} />

@@ -1,0 +1,117 @@
+/* src/components/Projects.module.css */
+
+.projectsSection {
+  padding: 6rem 2rem;
+  max-width: 1400px; /* Alinhado com a largura do Hero */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.introText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #90CAF9;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  background: linear-gradient(to right, #0026ff, #91a5ff, #0026ff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 9s linear infinite;
+}
+
+.projectsGrid {
+  display: grid;
+  /* Cria colunas responsivas: 3 colunas em telas grandes, 2 em médias, 1 em pequenas */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.projectCard {
+  background-color: rgba(26, 26, 46, 0.4); /* Fundo vidro fosco */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  text-align: left; /* Alinha o conteúdo do card à esquerda */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px); /* Efeito de "elevar" no hover */
+  box-shadow: 0 8px 32px 0 rgba(48, 207, 208, 0.3);
+  border-color: #30CFD0;
+}
+
+.projectImagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(10, 10, 26, 0.7); /* Cor escura para o placeholder */
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  /* No futuro, troque isso por uma tag <img /> */
+}
+
+.projectTitle {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.projectDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #c0c0c0;
+  flex-grow: 1; /* Faz a descrição crescer e empurrar os links para baixo */
+  margin-bottom: 1.5rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background-color: rgba(48, 207, 208, 0.2);
+  color: #30CFD0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #30CFD0; /* Cor de destaque no hover */
+  
+}

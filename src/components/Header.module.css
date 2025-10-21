@@ -1,31 +1,94 @@
 /* src/components/Header.module.css */
 
 .headerContainer {
-  position: fixed; /* Fica fixo na tela */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 2rem; /* Espaçamento interno */
-  z-index: 10; /* Garante que fique acima de tudo */
-  display: flex;
-  justify-content: flex-end; /* Alinha os ícones à direita */
-  align-items: center;
+  z-index: 10;
+  box-sizing: border-box;
 
-  /* EFEITO DE VIDRO FOSCO - SUBSTITUA A LINHA 'background-color' POR ESTAS DUAS */
-  background-color: rgba(10, 10, 26, 0.5); 
-  backdrop-filter: blur(10px); 
+  /* Efeito de vidro fosco (continua ocupando 100%) */
+  background-color: rgba(10, 10, 26, 0.5);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* --- NOVO CONTAINER DO CONTEÚDO --- */
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* A MÁGICA PARA "DESGRUDAR" */
+  max-width: 1600px; /* Alinha com o max-width do seu Hero */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 1rem 2rem; /* Adiciona o padding (margem interna) */
+  box-sizing: border-box;
+}
+
+
+/* --- ESTILO DO LOGO --- */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.logo a:hover {
+  color: #c0c0c0;
+}
+
+.logoImage {
+  height: 40px; 
+  width: auto; 
+  max-width: 150px; 
+  display: block;
+}
+
+/* --- ESTILO DA NAVEGAÇÃO (LINKS + ÍCONES) --- */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+/* --- SEPARADOR --- */
+.separator {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 0.5rem;
+}
+
+/* --- ÍCONES SOCIAIS --- */
+.socialIcons {
+  display: flex;
+  gap: 1.2rem;
+}
+
 .socialIcons a {
-  color: #ffffff; /* Cor branca */
-  font-size: 1.8rem; /* Tamanho do ícone */
-  margin-left: 1.5rem; /* Espaço entre os ícones */
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease; /* Transição suave para a animação */
+  color: #ffffff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .socialIcons a:hover {
-  color: #30CFD0; /* Muda para o azul do seu degradê ao passar o mouse */
-  transform: translateY(-5px); /* Move o ícone 5px para cima */
+  color: #30CFD0;
+  transform: translateY(-3px);
 }

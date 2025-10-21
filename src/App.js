@@ -2,15 +2,20 @@
 import './App.css';
 import Header from './components/Header.js';
 import Hero from './components/Hero.js';
-// A importação do AnimatedBackground não é mais necessária aqui
+import AnimatedBackground from './components/AnimatedBackground.js';
 import About from './components/About.js';
+import Projects from './components/Projects.js';
+import Contact from './components/Contact.js';
 
 function App() {
   return (
     <div className="App">
+      <AnimatedBackground /> 
       <Header />
       <Hero />
       <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
